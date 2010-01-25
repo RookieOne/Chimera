@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework", "Chimera.Framework\Chimera.Framework.csproj", "{BAFA6263-8076-4D0F-B250-14140634923A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Tests", "Chimera.Framework.Tests\Chimera.Framework.Tests.csproj", "{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{9683B42E-1FD8-4C42-8BB5-618EE84CED69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Routing.Default", "Chimera.Framework.Routing.Default\Chimera.Framework.Routing.Default.csproj", "{4581C9DD-49C1-476C-AE47-5790783F7D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Routing.Default.Tests", "Chimera.Framework.Routing.Default.Tests\Chimera.Framework.Routing.Default.Tests.csproj", "{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{8AF638F7-1210-4640-B438-D42CF6B8A23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.IoC.StructureMap", "Chimera.Framework.IoC.StructureMap\Chimera.Framework.IoC.StructureMap.csproj", "{804E9684-3E0F-4096-AF43-3A73F489D11D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D899597F-21DE-4ED1-BF80-E34204019FA4}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAFA6263-8076-4D0F-B250-14140634923A} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
+		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
+		{4581C9DD-49C1-476C-AE47-5790783F7D15} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
+		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
+		{804E9684-3E0F-4096-AF43-3A73F489D11D} = {8AF638F7-1210-4640-B438-D42CF6B8A23A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAFA6263-8076-4D0F-B250-14140634923A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chimera.Framework</RootNamespace>
+    <AssemblyName>Chimera.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Do.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Locators\Conventions\DefaultConvention.cs" />
+    <Compile Include="Locators\Conventions\IConvention.cs" />
+    <Compile Include="Locators\LocatorConfig.cs" />
+    <Compile Include="Locators\Conventions\SingletonAttribute.cs" />
+    <Compile Include="Locators\Conventions\SingletonConvention.cs" />
+    <Compile Include="Routing\FluentConfig\ActionRegistrationConfig.cs" />
+    <Compile Include="Routing\FluentConfig\FromAssemblyConfig.cs" />
+    <Compile Include="Routing\FluentConfig\FromTypesConfig.cs" />
+    <Compile Include="Routing\FluentConfig\RegisterRoutes.cs" />
+    <Compile Include="Routing\IRouteBuilderExtensions.cs" />
+    <Compile Include="Routing\IRouteExtensions.cs" />
+    <Compile Include="Routing\IRouteBuilder.cs" />
+    <Compile Include="Routing\IRoutingEngine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\IRoute.cs" />
+    <Compile Include="Locators\ILocator.cs" />
+    <Compile Include="Locators\Locator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
