@@ -1,4 +1,6 @@
-﻿namespace Chimera.Framework.Routing.Default
+﻿using Chimera.Framework.Routing;
+
+namespace Chimera.Routing.Default
 {
     public class RouteBuilder : IRouteBuilder
     {

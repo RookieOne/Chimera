@@ -8,8 +8,8 @@
     <ProjectGuid>{804E9684-3E0F-4096-AF43-3A73F489D11D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chimera.Framework.IoC.StructureMap</RootNamespace>
-    <AssemblyName>Chimera.Framework.IoC.StructureMap</AssemblyName>
+    <RootNamespace>Chimera.IoC.StructureMap</RootNamespace>
+    <AssemblyName>Chimera.IoC.StructureMap</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

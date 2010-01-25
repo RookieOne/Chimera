@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Chimera.Framework.Routing;
 
-namespace Chimera.Framework.Routing.Default
+namespace Chimera.Routing.Default
 {
     public class Route : IRoute
     {

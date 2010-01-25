@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Chimera.Framework.Locators;
+using Chimera.Framework.InversionOfControl;
+using Chimera.Framework.Routing;
 
-namespace Chimera.Framework.Routing.FluentConfig
+namespace Chimera.Routing.FluentConfig
 {
     public class ActionRegistrationConfig
     {
@@ -27,12 +28,12 @@ namespace Chimera.Framework.Routing.FluentConfig
                     var resourceName = pair.Item1;
                     var actionName = method.Name;
 
-                    var route = Locator.Get<IRouteBuilder>()
+                    var route = IoC.Get<IRouteBuilder>()
                         .StartRoute(actionName, resourceName)
                         .AddAllParametersFrom(method)
                         .Build();
 
-                    Locator.Get<IRoutingEngine>()
+                    IoC.Get<IRoutingEngine>()
                         .Register(route, r => InvokeMethod(method, r));
                 }
             }

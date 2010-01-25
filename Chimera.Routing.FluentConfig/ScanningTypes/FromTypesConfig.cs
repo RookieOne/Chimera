@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Chimera.Framework.Routing.FluentConfig
+namespace Chimera.Routing.FluentConfig
 {
     public class FromTypesConfig
     {

@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using Chimera.Framework.IoC.StructureMap;
 using Chimera.Framework.Locators;
-using Chimera.Framework.Routing.FluentConfig;
+using Chimera.Routing.FluentConfig;
 
-namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.ControllerTests
+namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
 {
     public class ControllerTestSetup
     {

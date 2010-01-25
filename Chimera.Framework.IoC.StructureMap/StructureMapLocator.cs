@@ -1,10 +1,10 @@
 ﻿using System;
-using Chimera.Framework.Locators;
+using Chimera.Framework.InversionOfControl;
 using StructureMap;
 
-namespace Chimera.Framework.IoC.StructureMap
+namespace Chimera.IoC.StructureMap
 {
-    public class StructureMapLocator : ILocator
+    public class StructureMapLocator : IChimeraContainer
     {
         public StructureMapLocator()
         {

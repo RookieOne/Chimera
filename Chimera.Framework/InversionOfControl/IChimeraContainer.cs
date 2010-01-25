@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Chimera.Framework.Locators
+namespace Chimera.Framework.InversionOfControl
 {
-    public interface ILocator
+    public interface IChimeraContainer
     {
         T Get<T>();
         object Get(Type type);

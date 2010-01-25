@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}</ProjectGuid>
+    <ProjectGuid>{381FED21-892E-43C3-B609-88C23E303A50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chimera.Framework.Routing.Default.Tests</RootNamespace>
-    <AssemblyName>Chimera.Framework.Routing.Default.Tests</AssemblyName>
+    <RootNamespace>Chimera.Routing.FluentConfig</RootNamespace>
+    <AssemblyName>Chimera.Routing.FluentConfig</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap">
-      <HintPath>..\dlls\StructureMap.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,32 +38,17 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\dlls\xunit.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.extensions">
-      <HintPath>..\dlls\xunit.extensions.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FluentConfigTests\ControllerTests\ControllersAreSingletonsConvention.cs" />
-    <Compile Include="FluentConfigTests\ControllerTests\ControllerTestSetup.cs" />
-    <Compile Include="FluentConfigTests\ControllerTests\CustomerControllerTests.cs" />
-    <Compile Include="FluentConfigTests\HandlerTests\RouteRegistrationTests.cs" />
+    <Compile Include="ScanningTypes\ActionRegistrationConfig.cs" />
+    <Compile Include="UsingActions\ActionToInvokeConfig.cs" />
+    <Compile Include="UsingActions\ForActionConfig.cs" />
+    <Compile Include="ScanningTypes\FromAssemblyConfig.cs" />
+    <Compile Include="ScanningTypes\FromTypesConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoutingEngineTests\Routes.cs" />
-    <Compile Include="TestingHelpers\ActionRecorder.cs" />
-    <Compile Include="TestingHelpers\AssertExtensions.cs" />
+    <Compile Include="RegisterRoutes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chimera.Framework.IoC.StructureMap\Chimera.Framework.IoC.StructureMap.csproj">
-      <Project>{804E9684-3E0F-4096-AF43-3A73F489D11D}</Project>
-      <Name>Chimera.Framework.IoC.StructureMap</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chimera.Framework.Routing.Default\Chimera.Framework.Routing.Default.csproj">
-      <Project>{4581C9DD-49C1-476C-AE47-5790783F7D15}</Project>
-      <Name>Chimera.Framework.Routing.Default</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Chimera.Framework\Chimera.Framework.csproj">
       <Project>{BAFA6263-8076-4D0F-B250-14140634923A}</Project>
       <Name>Chimera.Framework</Name>

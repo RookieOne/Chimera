@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Chimera.Framework.Locators.Conventions
+namespace Chimera.Framework.InversionOfControl.Conventions
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class SingletonAttribute : Attribute

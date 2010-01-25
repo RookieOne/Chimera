@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 
-namespace Chimera.Framework.Locators.Conventions
+namespace Chimera.Framework.InversionOfControl.Conventions
 {
     public class DefaultConvention : IConvention
     {
-        public void Configure(ILocator locator, Assembly assembly)
+        public void Configure(IChimeraContainer ioc, Assembly assembly)
         {
             var types = assembly.GetTypes();
 
@@ -15,7 +15,7 @@ namespace Chimera.Framework.Locators.Conventions
                 var interfaceType = type.GetInterface(interfaceName);
 
                 if (interfaceType != null)
-                    locator.Register(interfaceType, type);
+                    ioc.Register(interfaceType, type);
             }
         }
     }

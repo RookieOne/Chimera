@@ -14,5 +14,16 @@ namespace Chimera.Framework.Extensions
         {
             return (T) t.GetCustomAttributes(typeof (T), true).First();
         }
+
+        public static bool CanBeCastTo<T>(this Type t)
+        {
+            if (t == typeof(T))
+                return true;
+
+            if (t.BaseType == null)
+                return false;
+
+            return CanBeCastTo<T>(t.BaseType);
+        }
     }
 }

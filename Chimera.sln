@@ -9,18 +9,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Tests", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{9683B42E-1FD8-4C42-8BB5-618EE84CED69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Routing.Default", "Chimera.Framework.Routing.Default\Chimera.Framework.Routing.Default.csproj", "{4581C9DD-49C1-476C-AE47-5790783F7D15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.Default", "Chimera.Framework.Routing.Default\Chimera.Routing.Default.csproj", "{4581C9DD-49C1-476C-AE47-5790783F7D15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Routing.Default.Tests", "Chimera.Framework.Routing.Default.Tests\Chimera.Framework.Routing.Default.Tests.csproj", "{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.Default.Tests", "Chimera.Framework.Routing.Default.Tests\Chimera.Routing.Default.Tests.csproj", "{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{8AF638F7-1210-4640-B438-D42CF6B8A23A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.IoC.StructureMap", "Chimera.Framework.IoC.StructureMap\Chimera.Framework.IoC.StructureMap.csproj", "{804E9684-3E0F-4096-AF43-3A73F489D11D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.IoC.StructureMap", "Chimera.Framework.IoC.StructureMap\Chimera.IoC.StructureMap.csproj", "{804E9684-3E0F-4096-AF43-3A73F489D11D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D899597F-21DE-4ED1-BF80-E34204019FA4}"
 	ProjectSection(SolutionItems) = preProject
 		Performance1.psess = Performance1.psess
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.FluentConfig", "Chimera.Routing.FluentConfig\Chimera.Routing.FluentConfig.csproj", "{381FED21-892E-43C3-B609-88C23E303A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.FluentConfig.Tests", "Chimera.Routing.FluentConfig.Tests\Chimera.Routing.FluentConfig.Tests.csproj", "{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381FED21-892E-43C3-B609-88C23E303A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381FED21-892E-43C3-B609-88C23E303A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381FED21-892E-43C3-B609-88C23E303A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381FED21-892E-43C3-B609-88C23E303A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +69,8 @@ Global
 		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
 		{4581C9DD-49C1-476C-AE47-5790783F7D15} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
 		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
+		{381FED21-892E-43C3-B609-88C23E303A50} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
+		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
 		{804E9684-3E0F-4096-AF43-3A73F489D11D} = {8AF638F7-1210-4640-B438-D42CF6B8A23A}
 	EndGlobalSection
 EndGlobal

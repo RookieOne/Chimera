@@ -3,7 +3,7 @@ using System.Reflection;
 using Chimera.Framework.Locators;
 using Chimera.Framework.Locators.Conventions;
 
-namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.ControllerTests
+namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
 {
     public class ControllersAreSingletonsConvention : IConvention
     {
