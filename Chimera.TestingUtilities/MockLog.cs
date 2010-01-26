@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Chimera.Framework.Routing.Default.Tests.TestingHelpers
+namespace Chimera.TestingUtilities
 {
     public static class MockLog
     {

@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
-using Chimera.Framework.Routing.Default.Tests.TestingHelpers;
+using System.Linq;
+using Chimera.Framework.Routing;
+using Chimera.Framework.Routing.RouteSignatures;
+using Chimera.TestingUtilities;
 using Xunit.Extensions;
 
-namespace Chimera.Framework.Routing.Default.Tests.RoutingEngineTests
+namespace Chimera.Routing.Default.Tests.RoutingEngineTests
 {
     public class Routes
     {
@@ -24,12 +27,15 @@ namespace Chimera.Framework.Routing.Default.Tests.RoutingEngineTests
         public void TestRoute(IRoute route)
         {
             var routingEngine = new RoutingEngine();
-            var mappedAction = new ActionRecorder();
 
-            routingEngine.Register(route, r => mappedAction.RecordExecution());
+            var routeSignature = new DefaultRouteSignature(route.Action, route.Resource, route.Parameters.Keys.ToArray());
+            
+            MockLog.Reset();
+            
+            routingEngine.Register(routeSignature, r => MockLog.Record("Called", true));
             routingEngine.Resolve(route).Invoke(route);
 
-            mappedAction.WasExecuted().ShouldBeTrue();
+            MockLog.Read<bool>("Called").ShouldBeTrue();
         }
     }
 }

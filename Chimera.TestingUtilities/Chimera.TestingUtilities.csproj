@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{804E9684-3E0F-4096-AF43-3A73F489D11D}</ProjectGuid>
+    <ProjectGuid>{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chimera.IoC.StructureMap</RootNamespace>
-    <AssemblyName>Chimera.IoC.StructureMap</AssemblyName>
+    <RootNamespace>Chimera.TestingUtilities</RootNamespace>
+    <AssemblyName>Chimera.TestingUtilities</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap">
-      <HintPath>..\dlls\StructureMap.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,16 +38,17 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\dlls\xunit.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.extensions">
+      <HintPath>..\dlls\xunit.extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssertExtensions.cs" />
+    <Compile Include="MockLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StructureMapLocator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Chimera.Framework\Chimera.Framework.csproj">
-      <Project>{BAFA6263-8076-4D0F-B250-14140634923A}</Project>
-      <Name>Chimera.Framework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

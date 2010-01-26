@@ -1,8 +1,10 @@
-﻿using Chimera.Framework.Locators;
+﻿using Chimera.Framework.InversionOfControl;
+using Chimera.Framework.Routing;
+using Chimera.Routing.Default;
+using Chimera.TestingUtilities;
 using Xunit;
-using Chimera.Framework.Routing.Default.Tests.TestingHelpers;
 
-namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.ControllerTests
+namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
 {
     public class CustomerControllerTests : ControllerTestSetup
     {
@@ -11,8 +13,8 @@ namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.ControllerTe
         {
             RegisterControllers();
 
-            var c1 = Locator.Get<CustomerController>();
-            var c2 = Locator.Get<CustomerController>();
+            var c1 = IoC.Get<CustomerController>();
+            var c2 = IoC.Get<CustomerController>();
 
             Assert.Same(c1, c2);
         }
@@ -23,11 +25,11 @@ namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.ControllerTe
             RegisterControllers();
 
             var route = new Route("Get", "Customer");
-            
-            var action = Locator.Get<IRoutingEngine>().Resolve(route);
+
+            var action = IoC.Get<IRoutingEngine>().Resolve(route);
             action.Invoke(route);
 
-            Locator.Get<CustomerController>().GetCalled.ShouldBeTrue();
+            IoC.Get<CustomerController>().GetCalled.ShouldBeTrue();
         }
     }
 

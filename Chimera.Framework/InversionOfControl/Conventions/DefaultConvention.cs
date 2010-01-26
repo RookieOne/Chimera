@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 
 namespace Chimera.Framework.InversionOfControl.Conventions
 {
@@ -6,7 +7,7 @@ namespace Chimera.Framework.InversionOfControl.Conventions
     {
         public void Configure(IChimeraContainer ioc, Assembly assembly)
         {
-            var types = assembly.GetTypes();
+            var types = assembly.GetTypes().Where(t => !t.IsGenericType);
 
             foreach (var type in types)
             {

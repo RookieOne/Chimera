@@ -1,5 +1,7 @@
 ﻿using System;
+using Chimera.Framework.InversionOfControl;
 using Chimera.Framework.Routing;
+using Chimera.Framework.Routing.RouteSignatures;
 
 namespace Chimera.Routing.FluentConfig
 {
@@ -16,7 +18,9 @@ namespace Chimera.Routing.FluentConfig
 
         public void Then(Action<IRoute> action)
         {
-            //var routingEngine = IoC.Get<IRoutingEngine>().Register()
+            var signature = new FuncRouteSignature(r => r.Action == _action && _func(r));
+
+            IoC.Get<IRoutingEngine>().Register(signature, action);
         }
     }
 }

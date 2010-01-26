@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 
 namespace Chimera.Framework.Extensions
 {
@@ -20,10 +21,19 @@ namespace Chimera.Framework.Extensions
             if (t == typeof(T))
                 return true;
 
+            var foundInterface = t.GetInterfaces().Where(i => i == t);
+            if (foundInterface != null)
+                return true;
+
             if (t.BaseType == null)
                 return false;
 
             return CanBeCastTo<T>(t.BaseType);
+        }
+        
+        public static string[] GetParameterNames(this MethodInfo method)
+        {
+            return method.GetParameters().Select(p => p.Name).ToArray();
         }
     }
 }

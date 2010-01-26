@@ -51,14 +51,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoutingEngineTests\Routes.cs" />
-    <Compile Include="TestingHelpers\ActionRecorder.cs" />
-    <Compile Include="TestingHelpers\AssertExtensions.cs" />
-    <Compile Include="TestingHelpers\MockLog.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chimera.Framework.IoC.StructureMap\Chimera.IoC.StructureMap.csproj">
+    <ProjectReference Include="..\Chimera.Framework.IoC.StructureMap\Chimera.StructureMap.csproj">
       <Project>{804E9684-3E0F-4096-AF43-3A73F489D11D}</Project>
-      <Name>Chimera.IoC.StructureMap</Name>
+      <Name>Chimera.StructureMap</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chimera.Framework.Routing.Default\Chimera.Routing.Default.csproj">
       <Project>{4581C9DD-49C1-476C-AE47-5790783F7D15}</Project>
@@ -67,6 +64,10 @@
     <ProjectReference Include="..\Chimera.Framework\Chimera.Framework.csproj">
       <Project>{BAFA6263-8076-4D0F-B250-14140634923A}</Project>
       <Name>Chimera.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chimera.TestingUtilities\Chimera.TestingUtilities.csproj">
+      <Project>{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}</Project>
+      <Name>Chimera.TestingUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

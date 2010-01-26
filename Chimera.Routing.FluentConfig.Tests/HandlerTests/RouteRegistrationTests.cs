@@ -1,24 +1,25 @@
 ﻿using System.Linq;
 using System.Reflection;
-using Chimera.Framework.IoC.StructureMap;
-using Chimera.Framework.Locators;
-using Chimera.Framework.Routing.Default.Tests.TestingHelpers;
-using Chimera.Framework.Routing.FluentConfig;
+using Chimera.Framework.InversionOfControl;
+using Chimera.Framework.Routing;
+using Chimera.Routing.Default;
+using Chimera.StructureMap;
+using Chimera.TestingUtilities;
 using Xunit;
 
-namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.HandlerTests
+namespace Chimera.Routing.FluentConfig.Tests.HandlerTests
 {
     public class RouteRegistrationTests
     {
         protected void RegisterHandlers()
         {
-            var locator = new StructureMapLocator();
+            var locator = new StructureMapContainer();
 
-            new LocatorConfig(locator)
+            new IocConfig(locator)
                 .SetupDefaultConventions()
                 .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(typeof (RoutingEngine)));
 
-            Locator.SetImplementation(locator);
+            IoC.SetImplementation(locator);
 
             RegisterRoutes
                 .FromAssembly(Assembly.GetAssembly(this.GetType()))
@@ -32,8 +33,8 @@ namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.HandlerTests
         {
             RegisterHandlers();
 
-            var routingEngine = Locator.Get<IRoutingEngine>();
-            routingEngine.GetRoutes().Count().ShouldBe(2);
+            var routingEngine = IoC.Get<IRoutingEngine>();
+            routingEngine.GetRouteSignatures().Count().ShouldBe(2);
         }
     }
 

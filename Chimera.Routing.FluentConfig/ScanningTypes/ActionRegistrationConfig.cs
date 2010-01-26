@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Chimera.Framework.Extensions;
 using Chimera.Framework.InversionOfControl;
 using Chimera.Framework.Routing;
+using Chimera.Framework.Routing.RouteSignatures;
 
 namespace Chimera.Routing.FluentConfig
 {
@@ -28,20 +30,17 @@ namespace Chimera.Routing.FluentConfig
                     var resourceName = pair.Item1;
                     var actionName = method.Name;
 
-                    var route = IoC.Get<IRouteBuilder>()
-                        .StartRoute(actionName, resourceName)
-                        .AddAllParametersFrom(method)
-                        .Build();
+                    var routeSignature = new DefaultRouteSignature(actionName, resourceName, method.GetParameterNames());
 
                     IoC.Get<IRoutingEngine>()
-                        .Register(route, r => InvokeMethod(method, r));
+                        .Register(routeSignature, r => InvokeMethod(method, r));
                 }
             }
         }
 
         void InvokeMethod(MethodInfo method, IRoute route)
         {
-            var instance = Locator.Get(method.DeclaringType);
+            var instance = IoC.Get(method.DeclaringType);
 
             method.Invoke(instance, route.GetParametersFor(method));
         }

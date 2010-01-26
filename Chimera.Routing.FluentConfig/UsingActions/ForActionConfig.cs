@@ -1,4 +1,5 @@
 ﻿using System;
+using Chimera.Framework.Routing;
 
 namespace Chimera.Routing.FluentConfig
 {

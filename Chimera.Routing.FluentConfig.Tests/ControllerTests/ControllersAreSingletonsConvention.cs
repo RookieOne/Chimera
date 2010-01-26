@@ -1,20 +1,20 @@
 ﻿using System.Linq;
 using System.Reflection;
-using Chimera.Framework.Locators;
-using Chimera.Framework.Locators.Conventions;
+using Chimera.Framework.InversionOfControl;
+using Chimera.Framework.InversionOfControl.Conventions;
 
 namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
 {
     public class ControllersAreSingletonsConvention : IConvention
     {
-        public void Configure(ILocator locator, Assembly assembly)
+        public void Configure(IChimeraContainer ioc, Assembly assembly)
         {
             var types = assembly.GetTypes()
                 .Where(t => t.Name.EndsWith("Controller"));
 
             foreach (var controllerType in types)
             {
-                locator.RegisterSingleton(controllerType, controllerType);
+                ioc.RegisterSingleton(controllerType, controllerType);
             }
         }
     }

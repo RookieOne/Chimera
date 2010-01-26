@@ -1,46 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
-using System.Text;
-using Chimera.Framework.IoC.StructureMap;
-using Chimera.Framework.Locators;
-using Chimera.Framework.Locators.Conventions;
-using Chimera.Framework.Routing.Default.Tests.TestingHelpers;
-using Chimera.Framework.Routing.FluentConfig;
+using Chimera.Framework.InversionOfControl;
+using Chimera.Framework.Routing;
+using Chimera.Routing.Default;
+using Chimera.StructureMap;
+using Chimera.TestingUtilities;
+using Xunit;
 
-namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.RepositoryTests
+namespace Chimera.Routing.FluentConfig.Tests.RepositoryTests
 {
     public class RepositoryTests
     {
         void SetupRepositories()
         {
-            var locator = new StructureMapLocator();
+            var container = new StructureMapContainer();
+            container.Container.Configure(x => x.ForRequestedType(typeof (IRepository<>))
+                                                   .TheDefaultIsConcreteType(typeof (Repository<>)));
 
-            new LocatorConfig(locator)
-                .SetupDefaultConventions()                
-                .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(typeof(RoutingEngine)))
+
+            new IocConfig(container)
+                .SetupDefaultConventions()
+                .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(typeof (RoutingEngine)))
                 .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(this.GetType()));
 
-            Locator.SetImplementation(locator);
+            IoC.SetImplementation(container);
 
             RegisterRoutes
                 .For("Save")
                 .If(r => r.HasSingleParameterOfType<IEntity>())
-                .Then(r => SaveUsingRepository);
-                .FromAssembly(Assembly.GetAssembly(this.GetType()))
-                .FromTypes(t => t.Name.EndsWith("Controller"))
-                .UnderResourceName(t => t.Name.Replace("Controller", ""))
-                .AllPublicMethods();
+                .Then(SaveUsingRepository);
         }
 
+        void SaveUsingRepository(IRoute route)
+        {
+            var a = Assembly.GetAssembly(this.GetType());
+            var resourceType = a.GetTypes().FirstOrDefault(t => t.Name == route.Resource);
+
+            var methodToInvoke = GetType().GetMethods().FirstOrDefault(m => m.Name.Contains("SaveUsingGenericRepository"));
+
+            methodToInvoke
+                .MakeGenericMethod(resourceType)
+                .Invoke(this, new[] {route});
+        }
+
+        public void SaveUsingGenericRepository<T>(IRoute route)
+        {
+            var entity = (T) route.Parameters.First().Value;
+            var repository = IoC.Get<IRepository<T>>();
+            
+            repository.Save(entity);
+        }
+
+        [Fact]
+        public void should_have_one_route_signature()
+        {
+            SetupRepositories();
+
+            IoC.Get<IRoutingEngine>().GetRouteSignatures().Count().ShouldBe(1);
+        }
+
+        [Fact]
         public void should_call_save_on_repository()
         {
-            
+            SetupRepositories();
+
+            var order = new Order();
+            var route = new Route("Save", "Order").AddParameter("Order", order);
+
+            IoC.Get<IRoutingEngine>().Resolve(route).Invoke(route);
+
+            MockLog.Read<bool>("SaveCalled").ShouldBeTrue();
+            MockLog.Read<Order>("EntitySaved").ShouldBeTheSameAs(order);
         }
     }
 
-    public interface IEntity{}
+    public interface IEntity
+    {
+    }
 
     public interface IRepository<T>
     {
@@ -48,11 +84,11 @@ namespace Chimera.Framework.Routing.Default.Tests.FluentConfigTests.RepositoryTe
     }
 
     public class Order : IEntity
-    {        
+    {
     }
-    
+
     public class Repository<T> : IRepository<T>
-    {       
+    {
         public void Save<T>(T entity)
         {
             MockLog.Record("SaveCalled", true);

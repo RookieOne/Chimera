@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap">
+      <HintPath>..\dlls\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -38,9 +41,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\dlls\xunit.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.extensions">
+      <HintPath>..\dlls\xunit.extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="ControllerTests\ControllersAreSingletonsConvention.cs" />
     <Compile Include="ControllerTests\ControllerTestSetup.cs" />
     <Compile Include="ControllerTests\CustomerControllerTests.cs" />
@@ -49,9 +57,17 @@
     <Compile Include="RepositoryTests\RepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Chimera.Framework.IoC.StructureMap\Chimera.StructureMap.csproj">
+      <Project>{804E9684-3E0F-4096-AF43-3A73F489D11D}</Project>
+      <Name>Chimera.StructureMap</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Chimera.Framework.Routing.Default.Tests\Chimera.Routing.Default.Tests.csproj">
       <Project>{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}</Project>
       <Name>Chimera.Routing.Default.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chimera.Framework.Routing.Default\Chimera.Routing.Default.csproj">
+      <Project>{4581C9DD-49C1-476C-AE47-5790783F7D15}</Project>
+      <Name>Chimera.Routing.Default</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chimera.Framework\Chimera.Framework.csproj">
       <Project>{BAFA6263-8076-4D0F-B250-14140634923A}</Project>
@@ -60,6 +76,10 @@
     <ProjectReference Include="..\Chimera.Routing.FluentConfig\Chimera.Routing.FluentConfig.csproj">
       <Project>{381FED21-892E-43C3-B609-88C23E303A50}</Project>
       <Name>Chimera.Routing.FluentConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chimera.TestingUtilities\Chimera.TestingUtilities.csproj">
+      <Project>{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}</Project>
+      <Name>Chimera.TestingUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

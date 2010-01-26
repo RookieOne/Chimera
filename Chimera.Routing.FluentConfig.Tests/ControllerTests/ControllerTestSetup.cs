@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using Chimera.Framework.IoC.StructureMap;
-using Chimera.Framework.Locators;
-using Chimera.Routing.FluentConfig;
+using Chimera.Framework.InversionOfControl;
+using Chimera.Routing.Default;
+using Chimera.StructureMap;
 
 namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
 {
@@ -9,15 +9,15 @@ namespace Chimera.Routing.FluentConfig.Tests.ControllerTests
     {
         protected void RegisterControllers()
         {
-            var locator = new StructureMapLocator();
+            var locator = new StructureMapContainer();
 
-            new LocatorConfig(locator)
+            new IocConfig(locator)
                 .SetupDefaultConventions()
                 .AddConvention(new ControllersAreSingletonsConvention())
                 .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(typeof (RoutingEngine)))
                 .ConfigureWithConventionsFromAssembly(Assembly.GetAssembly(this.GetType()));
 
-            Locator.SetImplementation(locator);
+            IoC.SetImplementation(locator);
 
             RegisterRoutes
                 .FromAssembly(Assembly.GetAssembly(this.GetType()))
