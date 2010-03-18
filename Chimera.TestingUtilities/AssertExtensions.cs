@@ -1,22 +1,47 @@
-﻿using Xunit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chimera.TestingUtilities
 {
     public static class AssertExtensions
     {
-        public static void ShouldBeTrue(this bool b)
+        public static void ShouldNotBeNull<T>(this T x)
         {
-            Assert.True(b);
+            Assert.IsNotNull(x);
         }
 
-        public static void ShouldBe(this int actual, int expected)
+        public static void ShouldBeNull<T>(this T x)
         {
-            Assert.Equal(expected, actual);
+            Assert.IsNull(x);
+        }
+
+        public static void ShouldBeTrue(this bool b)
+        {
+            Assert.IsTrue(b);
+        }
+
+        public static void ShouldBeFalse(this bool b)
+        {
+            Assert.IsFalse(b);
+        }
+
+        public static void ShouldBe<T>(this T actual, T expected)
+        {
+            Assert.AreEqual(expected, actual);
+        }
+
+        public static void ShouldNotBe<T>(this T actual, T expected)
+        {
+            Assert.AreNotEqual(expected, actual);
         }
 
         public static void ShouldBeTheSameAs(this object actual, object expected)
         {
-            Assert.Same(expected, expected);
+            Assert.AreSame(expected, expected);
+        }
+
+        public static void ShouldBeOfType<T>(this object o)
+        {
+            Assert.IsInstanceOfType(o, typeof(T));
         }
     }
 }

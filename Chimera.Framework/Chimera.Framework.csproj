@@ -12,6 +12,10 @@
     <AssemblyName>Chimera.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,24 +44,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Controllers\IControllerFactory.cs" />
+    <Compile Include="Controllers\IControllerFactoryProcessor.cs" />
+    <Compile Include="Controllers\IControllerProcessor.cs" />
+    <Compile Include="Errors\IError.cs" />
+    <Compile Include="Errors\IErrorPresenter.cs" />
+    <Compile Include="Errors\IErrorPresenterProcessor.cs" />
+    <Compile Include="Errors\IErrorProcessor.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\Do.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EventArgs.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="InversionOfControl\ChimeraContainerExtensions.cs" />
     <Compile Include="InversionOfControl\Conventions\DefaultConvention.cs" />
     <Compile Include="InversionOfControl\Conventions\IConvention.cs" />
     <Compile Include="InversionOfControl\IocConfig.cs" />
     <Compile Include="InversionOfControl\Conventions\SingletonAttribute.cs" />
     <Compile Include="InversionOfControl\Conventions\SingletonConvention.cs" />
-    <Compile Include="Routing\IRouteBuilderExtensions.cs" />
-    <Compile Include="Routing\IRouteExtensions.cs" />
-    <Compile Include="Routing\IRouteBuilder.cs" />
+    <Compile Include="InversionOfControl\IocConfigExtensions.cs" />
+    <Compile Include="Listeners\IListenerFactory.cs" />
+    <Compile Include="Listeners\IListenerFactoryProcessor.cs" />
+    <Compile Include="Listeners\IListener.cs" />
+    <Compile Include="Listeners\IListenerProcessor.cs" />
+    <Compile Include="Logging\ILoggingProcessor.cs" />
+    <Compile Include="Routing\Extensions\ParameterExtensions.cs" />
+    <Compile Include="Routing\IRegisteredRouteProcessor.cs" />
+    <Compile Include="Routing\IRouteRegistrar.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Routing\Builders\IRouteBuilderExtensions.cs" />
+    <Compile Include="Routing\Extensions\IRouteExtensions.cs" />
+    <Compile Include="Routing\Builders\IRouteBuilder.cs" />
+    <Compile Include="Routing\IRouteProcessor.cs" />
+    <Compile Include="Routing\IRouteResult.cs" />
     <Compile Include="Routing\IRoutingEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\IRoute.cs" />
     <Compile Include="InversionOfControl\IChimeraContainer.cs" />
     <Compile Include="InversionOfControl\IoC.cs" />
     <Compile Include="Routing\IRouteSignature.cs" />
-    <Compile Include="Routing\RouteSignatures\DefaultRouteSignature.cs" />
-    <Compile Include="Routing\RouteSignatures\FuncRouteSignature.cs" />
+    <Compile Include="Utilities\IRegisterRoutes.cs" />
+    <Compile Include="Utilities\IRegistrar.cs" />
+    <Compile Include="Utilities\KnownActions.cs" />
+    <Compile Include="Utilities\KnownParameters.cs" />
+    <Compile Include="ViewModels\IViewModelEngine.cs" />
+    <Compile Include="ViewModels\IViewModelProcessor.cs" />
+    <Compile Include="ViewPresenters\IPresenterProcessor.cs" />
+    <Compile Include="ViewPresenters\IViewPresenterProcessor.cs" />
+    <Compile Include="Views\IViewBinder.cs" />
+    <Compile Include="Views\IViewEngine.cs" />
+    <Compile Include="Views\IViewProcessor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

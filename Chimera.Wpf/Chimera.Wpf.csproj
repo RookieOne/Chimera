@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F7FB88D-A74D-47B9-AC25-2DD90817576F}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chimera.Wpf</RootNamespace>
+    <AssemblyName>Chimera.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPF.MDI">
+      <HintPath>..\dlls\WPF.MDI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adorners\ErrorsAdorner.cs" />
+    <Compile Include="AttachedProperties\ViewProperties.cs" />
+    <Compile Include="Behaviors\RouteBehavior.cs" />
+    <Compile Include="Behaviors\RouteParameter.cs" />
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Commands\RouteCommand.cs" />
+    <Compile Include="Controls\Labeler.cs" />
+    <Compile Include="Controls\SectionControl.cs" />
+    <Compile Include="Controls\SectionTitle.cs" />
+    <Compile Include="Extensions\DurationExtensions.cs" />
+    <Compile Include="Fluent\Animate.cs" />
+    <Compile Include="Fluent\Bind.cs" />
+    <Compile Include="Fluent\Register.cs" />
+    <Compile Include="NotifyPropertyChanged\PropertyChangedBase.cs" />
+    <Compile Include="Presenters\ErrorPresenter.cs" />
+    <Compile Include="Presenters\MdiPresenter.cs" />
+    <Compile Include="Presenters\WindowPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RouteLog\OpenView.xaml.cs">
+      <DependentUpon>OpenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RouteLog\OpenViewModel.cs" />
+    <Compile Include="TransitionControl\AnimationStrategies\FadeAnimationStrategy.cs" />
+    <Compile Include="TransitionControl\AnimationStrategies\ITransitionAnimationStrategy.cs" />
+    <Compile Include="TransitionControl\AnimationStrategies\ModalAnimationStrategy.cs" />
+    <Compile Include="TransitionControl\AnimationStrategies\SlideAnimationStrategy.cs" />
+    <Compile Include="TransitionControl\AnimationStrategies\BaseTransitionAnimationStrategy.cs" />
+    <Compile Include="TransitionControl\ITransitionControl.cs" />
+    <Compile Include="TransitionControl\TransitionContentControl.xaml.cs">
+      <DependentUpon>TransitionContentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WpfViewBinder.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chimera.Default\Chimera.Default.csproj">
+      <Project>{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}</Project>
+      <Name>Chimera.Default</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chimera.Framework\Chimera.Framework.csproj">
+      <Project>{BAFA6263-8076-4D0F-B250-14140634923A}</Project>
+      <Name>Chimera.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="RouteLog\OpenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TransitionControl\TransitionContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -3,83 +3,272 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework", "Chimera.Framework\Chimera.Framework.csproj", "{BAFA6263-8076-4D0F-B250-14140634923A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A_Framework", "A_Framework", "{6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Tests", "Chimera.Framework.Tests\Chimera.Framework.Tests.csproj", "{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{9683B42E-1FD8-4C42-8BB5-618EE84CED69}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.Default", "Chimera.Framework.Routing.Default\Chimera.Routing.Default.csproj", "{4581C9DD-49C1-476C-AE47-5790783F7D15}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.Default.Tests", "Chimera.Framework.Routing.Default.Tests\Chimera.Routing.Default.Tests.csproj", "{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{8AF638F7-1210-4640-B438-D42CF6B8A23A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.StructureMap", "Chimera.Framework.IoC.StructureMap\Chimera.StructureMap.csproj", "{804E9684-3E0F-4096-AF43-3A73F489D11D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D_Implementations", "D_Implementations", "{8AF638F7-1210-4640-B438-D42CF6B8A23A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D899597F-21DE-4ED1-BF80-E34204019FA4}"
 	ProjectSection(SolutionItems) = preProject
+		Chimera.vsmdi = Chimera.vsmdi
+		Local.testsettings = Local.testsettings
 		Performance1.psess = Performance1.psess
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.FluentConfig", "Chimera.Routing.FluentConfig\Chimera.Routing.FluentConfig.csproj", "{381FED21-892E-43C3-B609-88C23E303A50}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Testing", "_Testing", "{E815BC4B-58B1-444C-BBC1-0EC2E14BDBB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Routing.FluentConfig.Tests", "Chimera.Routing.FluentConfig.Tests\Chimera.Routing.FluentConfig.Tests.csproj", "{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Z_Example", "Z_Example", "{A3F74DB8-ABEE-4DC8-BEDA-252FD63DD720}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{E815BC4B-58B1-444C-BBC1-0EC2E14BDBB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.TestingUtilities", "Chimera.TestingUtilities\Chimera.TestingUtilities.csproj", "{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Framework.Tests", "Chimera.Framework.Tests\Chimera.Framework.Tests.csproj", "{22604E9D-B116-42FD-977C-8A2E5B71FF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.TestingUtilities", "Chimera.TestingUtilities\Chimera.TestingUtilities.csproj", "{91AD6E17-4CAB-4429-AA5E-049395A6151E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Dlls", "_Dlls", "{5935930A-81B6-4CAD-898E-3BEBB4ACEC05}"
+	ProjectSection(SolutionItems) = preProject
+		dlls\FizzWare.NBuilder.dll = dlls\FizzWare.NBuilder.dll
+		dlls\Machine.Specifications.dll = dlls\Machine.Specifications.dll
+		dlls\nunit.framework.dll = dlls\nunit.framework.dll
+		dlls\Rhino.Mocks.dll = dlls\Rhino.Mocks.dll
+		dlls\StructureMap.AutoMocking.dll = dlls\StructureMap.AutoMocking.dll
+		dlls\StructureMap.dll = dlls\StructureMap.dll
+		dlls\System.ComponentModel.Composition.dll = dlls\System.ComponentModel.Composition.dll
+		dlls\System.CoreEx.dll = dlls\System.CoreEx.dll
+		dlls\System.Interactive.dll = dlls\System.Interactive.dll
+		dlls\System.Reactive.dll = dlls\System.Reactive.dll
+		dlls\WPF.MDI.dll = dlls\WPF.MDI.dll
+		dlls\xunit.dll = dlls\xunit.dll
+		dlls\xunit.extensions.dll = dlls\xunit.extensions.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B_Default", "B_Default", "{718E4FD7-DB1E-40F9-8BE0-7D798F645E78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Default", "Chimera.Default\Chimera.Default.csproj", "{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Default.Tests", "Chimera.Default.Tests\Chimera.Default.Tests.csproj", "{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C_FluentConfig", "C_FluentConfig", "{CD715C54-3A5E-481B-8D93-66AE156E7958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Fluent", "Chimera.Fluent\Chimera.Fluent.csproj", "{151E78B5-08DF-4E60-9225-44CDD4AC2514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.InteractionTests", "Chimera.Fluent.Tests\Chimera.InteractionTests.csproj", "{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.StructureMap", "Chimera.StructureMap\Chimera.StructureMap.csproj", "{804E9684-3E0F-4096-AF43-3A73F489D11D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "E_Wpf", "E_Wpf", "{EEDB315C-AD59-4263-88A7-0BBA8F6486BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Wpf", "Chimera.Wpf\Chimera.Wpf.csproj", "{4F7FB88D-A74D-47B9-AC25-2DD90817576F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "G_InteractionTests", "G_InteractionTests", "{2D5D60FB-D2C8-4AA0-BB57-0AE82870307A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chimera.Default.UsedForReflectionTests", "Chimera.Default.UsedForReflectionTests\Chimera.Default.UsedForReflectionTests.csproj", "{2B51DFE2-5E98-48FD-8A24-39465CD81CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Customers", "Example.Customers\Example.Customers.csproj", "{830AB1EA-1FF4-4799-87B6-186336A04B54}"
 EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2010.eps-office.com:8080/tfs/american%20innovations%20pcs%20sql
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Chimera.Framework.Tests\\Chimera.Framework.Tests.csproj
+		SccProjectTopLevelParentUniqueName1 = Chimera.sln
+		SccProjectName1 = Chimera.Framework.Tests
+		SccLocalPath1 = Chimera.Framework.Tests
+		SccProjectUniqueName2 = Chimera.Framework\\Chimera.Framework.csproj
+		SccProjectTopLevelParentUniqueName2 = Chimera.sln
+		SccProjectName2 = Chimera.Framework
+		SccLocalPath2 = Chimera.Framework
+		SccProjectUniqueName3 = Chimera.TestingUtilities\\Chimera.TestingUtilities.csproj
+		SccProjectTopLevelParentUniqueName3 = Chimera.sln
+		SccProjectName3 = Chimera.TestingUtilities
+		SccLocalPath3 = Chimera.TestingUtilities
+		SccProjectUniqueName4 = Example\\Example.csproj
+		SccProjectTopLevelParentUniqueName4 = Chimera.sln
+		SccProjectName4 = Example
+		SccLocalPath4 = Example
+		SccProjectUniqueName5 = Chimera.Default\\Chimera.Default.csproj
+		SccProjectTopLevelParentUniqueName5 = Chimera.sln
+		SccProjectName5 = Chimera.Default
+		SccLocalPath5 = Chimera.Default
+		SccProjectUniqueName6 = Chimera.Default.Tests\\Chimera.Default.Tests.csproj
+		SccProjectTopLevelParentUniqueName6 = Chimera.sln
+		SccProjectName6 = Chimera.Default.Tests
+		SccLocalPath6 = Chimera.Default.Tests
+		SccProjectUniqueName7 = Chimera.Fluent\\Chimera.Fluent.csproj
+		SccProjectTopLevelParentUniqueName7 = Chimera.sln
+		SccProjectName7 = Chimera.Fluent
+		SccLocalPath7 = Chimera.Fluent
+		SccProjectUniqueName8 = Chimera.StructureMap\\Chimera.StructureMap.csproj
+		SccProjectTopLevelParentUniqueName8 = Chimera.sln
+		SccProjectName8 = Chimera.StructureMap
+		SccLocalPath8 = Chimera.StructureMap
+		SccProjectUniqueName9 = Chimera.Wpf\\Chimera.Wpf.csproj
+		SccProjectTopLevelParentUniqueName9 = Chimera.sln
+		SccProjectName9 = Chimera.Wpf
+		SccLocalPath9 = Chimera.Wpf
+		SccProjectUniqueName10 = Chimera.Fluent.Tests\\Chimera.InteractionTests.csproj
+		SccProjectTopLevelParentUniqueName10 = Chimera.sln
+		SccProjectName10 = Chimera.Fluent.Tests
+		SccLocalPath10 = Chimera.Fluent.Tests
+		SccProjectUniqueName11 = Chimera.Default.UsedForReflectionTests\\Chimera.Default.UsedForReflectionTests.csproj
+		SccProjectTopLevelParentUniqueName11 = Chimera.sln
+		SccProjectName11 = Chimera.Default.UsedForReflectionTests
+		SccLocalPath11 = Chimera.Default.UsedForReflectionTests
+		SccProjectUniqueName12 = Example.Customers\\Example.Customers.csproj
+		SccProjectTopLevelParentUniqueName12 = Chimera.sln
+		SccProjectName12 = Example.Customers
+		SccLocalPath12 = Example.Customers
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Chimera.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4581C9DD-49C1-476C-AE47-5790783F7D15}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BAFA6263-8076-4D0F-B250-14140634923A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Debug|x86.ActiveCfg = Debug|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Debug|x86.Build.0 = Debug|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Release|Any CPU.ActiveCfg = Release|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Release|x86.ActiveCfg = Release|x86
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69}.Release|x86.Build.0 = Release|x86
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51}.Release|x86.ActiveCfg = Release|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA}.Release|x86.ActiveCfg = Release|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8}.Release|x86.ActiveCfg = Release|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514}.Release|x86.ActiveCfg = Release|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C}.Release|x86.ActiveCfg = Release|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{381FED21-892E-43C3-B609-88C23E303A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{381FED21-892E-43C3-B609-88C23E303A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{381FED21-892E-43C3-B609-88C23E303A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{381FED21-892E-43C3-B609-88C23E303A50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{804E9684-3E0F-4096-AF43-3A73F489D11D}.Release|x86.ActiveCfg = Release|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED}.Release|x86.ActiveCfg = Release|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{830AB1EA-1FF4-4799-87B6-186336A04B54}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BAFA6263-8076-4D0F-B250-14140634923A} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
-		{7B5E212D-E9F6-4C95-BFB2-5C5E4AF1E0EA} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
-		{4581C9DD-49C1-476C-AE47-5790783F7D15} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
-		{1099B6F4-2CDA-4C6D-A581-534DB67F5E4D} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
-		{381FED21-892E-43C3-B609-88C23E303A50} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
-		{7A73956C-2FD5-4AB2-97A0-429E1E26B9A0} = {9683B42E-1FD8-4C42-8BB5-618EE84CED69}
+		{22604E9D-B116-42FD-977C-8A2E5B71FF51} = {6D9CC27C-7B07-4FBA-8459-04EB8BFDC52E}
 		{804E9684-3E0F-4096-AF43-3A73F489D11D} = {8AF638F7-1210-4640-B438-D42CF6B8A23A}
-		{5D7E322E-C9EF-4127-BA4F-6EE1D10337DF} = {E815BC4B-58B1-444C-BBC1-0EC2E14BDBB7}
+		{91AD6E17-4CAB-4429-AA5E-049395A6151E} = {E815BC4B-58B1-444C-BBC1-0EC2E14BDBB7}
+		{EFB2F908-A3ED-4DFC-8C1E-3749E130FF69} = {A3F74DB8-ABEE-4DC8-BEDA-252FD63DD720}
+		{830AB1EA-1FF4-4799-87B6-186336A04B54} = {A3F74DB8-ABEE-4DC8-BEDA-252FD63DD720}
+		{0EE5DEAE-A4DD-4A6C-BF7D-952BF30986AA} = {718E4FD7-DB1E-40F9-8BE0-7D798F645E78}
+		{475AE012-59F8-45FA-90CC-DDA6DEEAA1E8} = {718E4FD7-DB1E-40F9-8BE0-7D798F645E78}
+		{2B51DFE2-5E98-48FD-8A24-39465CD81CED} = {718E4FD7-DB1E-40F9-8BE0-7D798F645E78}
+		{151E78B5-08DF-4E60-9225-44CDD4AC2514} = {CD715C54-3A5E-481B-8D93-66AE156E7958}
+		{34BC90C1-1016-4B44-98A6-3F5A4E220C8C} = {2D5D60FB-D2C8-4AA0-BB57-0AE82870307A}
+		{4F7FB88D-A74D-47B9-AC25-2DD90817576F} = {EEDB315C-AD59-4263-88A7-0BBA8F6486BD}
 	EndGlobalSection
 EndGlobal

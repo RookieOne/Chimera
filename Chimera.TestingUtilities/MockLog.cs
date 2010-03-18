@@ -13,7 +13,10 @@ namespace Chimera.TestingUtilities
 
         public static void Record(string key, object value)
         {
-            _recordings.Add(key, value);
+            if (_recordings.ContainsKey(key))
+                _recordings[key] = value;
+            else
+                _recordings.Add(key, value);
         }
 
         public static T Read<T>(string key)

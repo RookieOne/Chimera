@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Example.Login.RequestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:Chimera.Wpf.Controls;assembly=Chimera.Wpf" 
+             xmlns:Behaviors="clr-namespace:Chimera.Wpf.Behaviors;assembly=Chimera.Wpf" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Controls:SectionControl Title="Login">
+        
+        <StackPanel>
+            <Controls:Labeler Label="User Name">
+                <TextBox Text="{Binding UserName}" />
+            </Controls:Labeler>
+            
+            <Controls:Labeler Label="Password">
+                <TextBox Text="{Binding Password}" />
+            </Controls:Labeler>
+            
+            <Button Content="Submit"                                        
+                    Behaviors:RouteBehavior.Route="submit login">
+                <Behaviors:RouteBehavior.Params>
+                    <Behaviors:RouteParameter Key="request" Value="{Binding }" />
+                </Behaviors:RouteBehavior.Params>
+            </Button>
+        </StackPanel>
+        
+    </Controls:SectionControl>
+</UserControl>
